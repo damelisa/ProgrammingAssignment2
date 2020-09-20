@@ -1,12 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Function makeCacheMatrix adds a cache to my matrix
+## Function cacheSolve searches for the inverse matrix and generates one if necessary
 
-## Write a short comment describing this function
-# make output which contains matrix & inverse of matrix
-# 1. set value of matrix
-# 2. get the value of the matrix
-# 3. set the value of the inverse matrix
-# 4. get the value of the inverse matrix
+## Summary makeCacheMatrix
+# set the inverse matrix to NULL
+# generate set function for setting the matrix
+# generate get function for getting the matrix
+# generate setinverse function for setting the cache of the inverse matrix
+# generate getinverse function for getting the cache of the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   c <- NULL
@@ -24,15 +24,20 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-# 1. check if cache of inverse matrix is full
-# 2. when full, get the inverse of the matrix
-# 3. if not full, get the matrix original data
-# 4. calculate the inverse of the matrix original data
-# 5. return the inverse of the matrix
+## Summary cacheSolve
+# set the inverse matrix to NULL
+# generate set function for setting the matrix
+# generate get function for getting the matrix
+# generate setinverse function for setting the cache of the inverse matrix
+# generate getinverse function for getting the cache of the inverse matrix
+# check the cache of the inverse matrix to see if an inverse matrix is present
+# if a inverse matrix is present, return it
+# if no inverse matrix is present, define the data to the matrix original data
+# then calculate the inverse matrix of the matrix original data
+# set the cache to the calculated inverse matrix
+# and return the inverse matrix
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
   c <- x$getinverse()
   if(!is.null(c)) {
     message ("getting cached data")
